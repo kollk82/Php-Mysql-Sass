@@ -1,0 +1,22 @@
+
+@import "_variables";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+  
+}
+body{
+    background-color: $primary-bg-color;
+    font: $font-size-primary $font-main ;
+    color: $primary-font-color;
+    background-image: url("../static/img/foggy-birds.png");
+    line-height: $lh;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}

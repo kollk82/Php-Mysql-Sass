@@ -1,0 +1,25 @@
+@mixin section-home {
+    #home--p{
+        height: 60%;
+    }
+    .section--button{
+        display: block;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        padding:0 10px;
+        margin: 10px;
+        background-color: rgba(255, 255, 255, 0.2); /* buttons */
+        align-self: flex-end;
+        font-size: 100%;
+        @include small-device{
+            font-size: 70%;
+            margin: 5px;
+            padding: 0 5px;
+        }
+        cursor: pointer;
+        &:hover{
+            color: $orange-color;
+        }
+    }
+}

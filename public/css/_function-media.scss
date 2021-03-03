@@ -1,0 +1,17 @@
+
+@mixin small-device {
+    @media (min-width: 0px) and (max-width: 1400px){
+        @content;
+    }
+}
+@mixin smaller-device {
+    @media (min-width: 0px) and (max-width: 600px){
+        @content;
+    }
+}
+@mixin nav-device {
+    @media (min-width: 601px){
+        @content;
+    }
+}
+

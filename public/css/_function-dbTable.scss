@@ -1,0 +1,43 @@
+@mixin section-table {
+    &:hover{
+        transform: perspective(900px) rotateY(0deg);
+    }
+    .human_res{
+        @include scrollbar;
+        h1, th{
+            text-align: center; 
+        }
+        a{
+            color: $primary-font-color;
+            &:hover{
+                color: $orange-color;
+            }
+        }
+        div{
+            padding: 10px;
+        }
+        table{
+            width: 100%;
+            th{
+                width: 10%;
+                border: none;
+                background-color: rgb(247, 153, 30);
+                color: black;
+                outline: none;
+            }
+            tr{
+                &:nth-child(odd) {
+                    background:  rgba(0, 0, 0, 0.3);
+                } 
+            } 
+            td{
+                padding: 10px;
+                text-align: center;
+            }
+        }
+        #show-table{
+            display: none;
+        }
+    }
+       
+}

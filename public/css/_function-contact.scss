@@ -1,0 +1,67 @@
+@mixin section-contact {
+    .main-contact{
+        margin: auto;
+        width: 50%;
+        @include small-device{
+            width: 90%;
+        }
+        padding:0 30px;
+        @include scrollbar;
+        form{
+            padding: 10px;
+            input, textarea, button{
+                width: 100%;
+                background: $content-bg;
+                border: 0;
+            }
+            input, textarea{
+                color: $orange-color;
+                &::placeholder{
+                    padding-left: 10px;
+                }
+                &:focus,
+                &:hover{
+                    border: none;
+                    outline: 1px solid $orange-color;
+                    transition: .3s;
+                }
+            }
+            input, button{
+                height: 25px;
+            }
+            textarea{
+                resize: none;
+            }
+            input:-webkit-autofill {
+                -webkit-text-fill-color: $orange-color;
+            }
+            input:-webkit-autofill,
+            input:-webkit-autofill:hover, 
+            input:-webkit-autofill:focus, 
+            input:-webkit-autofill:active  {
+                box-shadow: 0 0 0px 1000px rgba(0, 0, 0, 0) inset;
+                transition: background-color 5000s ease-in-out 0s;
+            }
+            button{
+                color: $primary-font-color;
+                cursor: pointer;
+                background-color: $orange-color;
+                outline: 0;
+                margin-top: 20px;
+                &:hover{
+                    background-color: $primary-font-color;
+                    color: $orange-color;
+                    transition: .3s;
+                }
+            }
+            p{
+                font-size: 50%;
+                a{
+                    &:hover{
+                        color: $orange-color;
+                    }
+                }
+            }
+        }
+    }
+}

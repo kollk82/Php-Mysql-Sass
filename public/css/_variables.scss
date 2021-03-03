@@ -1,0 +1,12 @@
+$font-main: Helvetica, sans-serif;
+$primary-bg-color: #000000;
+$primary-font-color: #c7c7c7;
+$orange-color: #ff7b00;
+$content-bg: #00000066;
+
+
+ // Minimum 16x, and grows more slowly 
+  // (half the rate of screen growth)  ccs-tricks.com
+$font-size-primary: calc(1em + 0.3vw);   
+$lh: calc(1.1em + 0.3vw); 
+

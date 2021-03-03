@@ -1,0 +1,57 @@
+@mixin nav{
+    .right-nav{                
+        display: flex;
+        flex: 1;
+        justify-content: flex-end;
+        line-height: 100%;
+        height: auto;
+        width: auto;
+        animation-name: nav-slide;
+        animation-duration: 2s;  
+        animation-fill-mode: forwards;
+        @keyframes nav-slide {
+            from {transform: translatey(1600px);}
+            to {transform: translatey(0px);}
+          }
+          
+        ul{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: auto;
+            height: 100%;
+            float: right;
+            @include smaller-device{
+                width: auto;     
+                height: 35%;
+                
+            }  
+            li{
+                padding: 0 10px;
+                @include smaller-device{
+                    padding: 0 5px;
+                    &:last-child{
+                        padding-right: 10px;
+                    }
+                }
+                .active, .btn:hover{
+                    color:$orange-color;
+                }
+                a{
+                    font-size: 100%;
+                    line-height: 0px;
+                    @include smaller-device{
+                        font-size: 50%;
+                    }
+                    @include small-device{
+                        font-size: 40%;
+
+                    }
+                }
+                &:last-child{
+                    color:$primary-font-color;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,1081 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  background-color: #000000;
+  font: calc(1em + 0.3vw) Helvetica, sans-serif;
+  color: #c7c7c7;
+  background-image: url("../static/img/foggy-birds.png");
+  line-height: calc(1.1em + 0.3vw);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.container .container--wrapper {
+  /* header */
+  width: inherit;
+  height: inherit;
+  background-image: url("../static/img/bg-img2.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.container .container--wrapper header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: relative;
+  width: 100%;
+  height: 20%;
+}
+
+@media (min-width: 0px) and (max-width: 600px) {
+  .container .container--wrapper header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 1400px) {
+  .container .container--wrapper header {
+    height: 10%;
+  }
+}
+
+@media (min-width: 601px) {
+  .container .container--wrapper header .hide-it {
+    display: none;
+  }
+}
+
+.container .container--wrapper header .nav-bar {
+  display: none;
+}
+
+@media (min-width: 0px) and (max-width: 600px) {
+  .container .container--wrapper header .nav-bar {
+    display: block;
+    z-index: 9999;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 200%;
+    color: #7a7a7a;
+    cursor: pointer;
+    padding: 10px;
+  }
+}
+
+.container .container--wrapper header .top-nav-cl {
+  color: #7a7a7a;
+}
+
+.container .container--wrapper header #top-nav {
+  display: none;
+}
+
+@media (min-width: 0px) and (max-width: 600px) {
+  .container .container--wrapper header #top-nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+    z-index: 2;
+    background-color: #f1f1f1;
+    padding: 10px 0;
+  }
+  .container .container--wrapper header #top-nav ul {
+    text-align: center;
+  }
+  .container .container--wrapper header #top-nav ul li .active, .container .container--wrapper header #top-nav ul li .btn:hover {
+    color: #ff7b00;
+  }
+  .container .container--wrapper header #top-nav ul li .active-nav {
+    color: #ff7b00;
+  }
+}
+
+.container .container--wrapper header .box-1, .container .container--wrapper header .box-2 {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-animation-name: roll;
+          animation-name: roll;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@media (min-width: 0px) and (max-width: 600px) {
+  .container .container--wrapper header .box-1, .container .container--wrapper header .box-2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 600px) {
+  .container .container--wrapper header .box-1, .container .container--wrapper header .box-2 {
+    padding: 5px 0px;
+    -webkit-animation: none;
+            animation: none;
+  }
+}
+
+@-webkit-keyframes roll {
+  from {
+    -webkit-transform: translateY(-1600px);
+            transform: translateY(-1600px);
+  }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes roll {
+  from {
+    -webkit-transform: translateY(-1600px);
+            transform: translateY(-1600px);
+  }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+.container .container--wrapper header .box-1 .box-top-content, .container .container--wrapper header .box-2 .box-top-content {
+  width: 400px;
+  height: 100px;
+  background-color: #00000066;
+  border-radius: 50px;
+}
+
+@media (min-width: 0px) and (max-width: 1400px) {
+  .container .container--wrapper header .box-1 .box-top-content, .container .container--wrapper header .box-2 .box-top-content {
+    width: 200px;
+    height: 50px;
+  }
+}
+
+.container .container--wrapper header .box-1 .box-top-content ul, .container .container--wrapper header .box-2 .box-top-content ul {
+  font-size: 60%;
+  line-height: 150%;
+  font-weight: 400;
+  height: 100%;
+  padding-top: 10px;
+  padding-left: 150px;
+}
+
+@media (min-width: 0px) and (max-width: 1400px) {
+  .container .container--wrapper header .box-1 .box-top-content ul, .container .container--wrapper header .box-2 .box-top-content ul {
+    font-size: 30%;
+    padding-left: 60px;
+  }
+}
+
+.container .container--wrapper header .box-1 .box-top-content ul li:first-child, .container .container--wrapper header .box-2 .box-top-content ul li:first-child {
+  color: #ff7b00;
+  font-size: 150%;
+  font-weight: bold;
+}
+
+.container .container--wrapper header .box-1 .social, .container .container--wrapper header .box-2 .social {
+  float: right;
+  margin-left: auto;
+}
+
+@media (min-width: 0px) and (max-width: 600px) {
+  .container .container--wrapper header .box-1 .social, .container .container--wrapper header .box-2 .social {
+    float: none;
+    margin-left: 0;
+  }
+}
+
+.container .container--wrapper header .box-1 .social ul, .container .container--wrapper header .box-2 .social ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 160%;
+  padding: 0;
+  margin: 0 50px;
+}
+
+@media (min-width: 0px) and (max-width: 1400px) {
+  .container .container--wrapper header .box-1 .social ul, .container .container--wrapper header .box-2 .social ul {
+    font-size: 100%;
+    margin: 0 20px;
+  }
+}
+
+.container .container--wrapper header .box-1 .social ul li:first-child, .container .container--wrapper header .box-2 .social ul li:first-child {
+  color: #00acee;
+  font-size: 100%;
+}
+
+.container .container--wrapper header .box-1 .social ul li:nth-child(2), .container .container--wrapper header .box-2 .social ul li:nth-child(2) {
+  color: #6992eb;
+}
+
+.container .container--wrapper header .box-1 .social ul li:nth-child(3), .container .container--wrapper header .box-2 .social ul li:nth-child(3) {
+  color: #f5d72e;
+}
+
+.container .container--wrapper header .box-1 .social ul li:nth-child(4), .container .container--wrapper header .box-2 .social ul li:nth-child(4) {
+  color: #63be57;
+}
+
+.container .container--wrapper header .box-1 img, .container .container--wrapper header .box-2 img {
+  width: 100px;
+  height: 100px;
+  border: 2px solid #ff7b00;
+  border-radius: 100px;
+  opacity: .9;
+  -o-object-fit: contain;
+     object-fit: contain;
+  float: left;
+}
+
+@media (min-width: 0px) and (max-width: 1400px) {
+  .container .container--wrapper header .box-1 img, .container .container--wrapper header .box-2 img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.container .container--wrapper #login-page, .container .container--wrapper #signup-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+@media (min-width: 0px) and (max-width: 1400px) {
+  .container .container--wrapper #login-page, .container .container--wrapper #signup-page {
+    margin-top: 0px;
+  }
+}
+
+.container .container--wrapper #login-page main, .container .container--wrapper #signup-page main {
+  height: 50%;
+}
+
+@media (min-width: 0px) and (max-width: 1400px) {
+  .container .container--wrapper #login-page main, .container .container--wrapper #signup-page main {
+    width: 100%;
+  }
+}
+
+.container .container--wrapper #login-page main h1, .container .container--wrapper #signup-page main h1 {
+  text-transform: uppercase;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.container .container--wrapper #login-page main small, .container .container--wrapper #signup-page main small {
+  color: red;
+  font-size: 60%;
+}
+
+.container .container--wrapper #login-page main .no-access, .container .container--wrapper #signup-page main .no-access {
+  display: none;
+}
+
+@media (min-width: 0px) and (max-width: 1400px) {
+  .container .container--wrapper #login-page main .no-access, .container .container--wrapper #signup-page main .no-access {
+    display: block;
+  }
+}
+
+.container .container--wrapper #login-page .login-locked, .container .container--wrapper #signup-page .login-locked {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container .container--wrapper #login-page .login-locked h1, .container .container--wrapper #login-page .login-locked i, .container .container--wrapper #signup-page .login-locked h1, .container .container--wrapper #signup-page .login-locked i {
+  text-align: center;
+  color: #f10000;
+}
+
+.container .container--wrapper #login-page .login-locked i, .container .container--wrapper #signup-page .login-locked i {
+  font-size: 800%;
+}
+
+@media (min-width: 0px) and (max-width: 1400px) {
+  .container .container--wrapper #login-page .login-locked, .container .container--wrapper #signup-page .login-locked {
+    display: none;
+  }
+}
+
+.container .container--wrapper #login-page .main-contact a, .container .container--wrapper #login-page .main-contact small, .container .container--wrapper #signup-page .main-contact a, .container .container--wrapper #signup-page .main-contact small {
+  font-size: 50%;
+  float: left;
+}
+
+.container .container--wrapper #login-page .main-contact a:hover, .container .container--wrapper #signup-page .main-contact a:hover {
+  color: #ff7b00;
+}
+
+.container .container--wrapper #login-page h1 {
+  color: red;
+}
+
+.container .container--wrapper #signup-page h1 {
+  color: #ff7b00;
+}
+
+.container .container--wrapper section {
+  /* main */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 60%;
+}
+
+@media (min-width: 0px) and (max-width: 1400px) {
+  .container .container--wrapper section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-left: 20px;
+    overflow-y: scroll;
+  }
+  .container .container--wrapper section::-webkit-scrollbar {
+    height: 10px;
+    width: 20px;
+  }
+  .container .container--wrapper section::-webkit-scrollbar-thumb {
+    background: #ffffff66;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 600px) {
+  .container .container--wrapper section {
+    margin-top: 50px;
+    height: 75%;
+    margin-left: 20px;
+  }
+}
+
+.container .container--wrapper section aside, .container .container--wrapper section main {
+  margin: 30px 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2%;
+  background-color: #00000066;
+  -webkit-transition: .2s;
+  transition: .2s;
+  -webkit-transform: perspective(900px) rotateY(0deg);
+          transform: perspective(900px) rotateY(0deg);
+  text-align: left;
+}
+
+.container .container--wrapper section aside .news, .container .container--wrapper section main .news {
+  overflow-y: scroll;
+  padding-top: 10px;
+}
+
+.container .container--wrapper section aside .news::-webkit-scrollbar, .container .container--wrapper section main .news::-webkit-scrollbar {
+  height: 10px;
+  width: 20px;
+}
+
+.container .container--wrapper section aside .news::-webkit-scrollbar-thumb, .container .container--wrapper section main .news::-webkit-scrollbar-thumb {
+  background: #ffffff66;
+}
+
+.container .container--wrapper section aside .news a h1, .container .container--wrapper section main .news a h1 {
+  padding-bottom: 30px;
+  color: #ff7b00;
+}
+
+.container .container--wrapper section aside .news a h1:hover, .container .container--wrapper section main .news a h1:hover {
+  color: #c7c7c7;
+}
+
+.container .container--wrapper section aside .news p, .container .container--wrapper section main .news p {
+  text-indent: 30px;
+}
+
+@media (min-width: 0px) and (max-width: 1400px) {
+  .container .container--wrapper section aside, .container .container--wrapper section main {
+    margin: 10px 30px;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 1400px) {
+  .container .container--wrapper section aside, .container .container--wrapper section main {
+    padding-top: 10px;
+  }
+}
+
+.container .container--wrapper section aside:hover, .container .container--wrapper section main:hover {
+  -webkit-transition: .2s;
+  transition: .2s;
+  -webkit-transform: perspective(900px) rotateY(5deg);
+          transform: perspective(900px) rotateY(5deg);
+}
+
+@media (min-width: 0px) and (max-width: 1400px) {
+  .container .container--wrapper section aside:hover, .container .container--wrapper section main:hover {
+    -webkit-transform: perspective(900px) rotateY(0deg);
+            transform: perspective(900px) rotateY(0deg);
+  }
+}
+
+.container .container--wrapper section aside h1, .container .container--wrapper section main h1 {
+  color: #ff7b00;
+  font-size: 150%;
+  padding-bottom: 10px;
+}
+
+@media (min-width: 0px) and (max-width: 1400px) {
+  .container .container--wrapper section aside h1, .container .container--wrapper section main h1 {
+    font-size: 100%;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 1400px) {
+  .container .container--wrapper section aside h1, .container .container--wrapper section main h1 {
+    padding-bottom: 5px;
+  }
+}
+
+.container .container--wrapper section aside p,
+.container .container--wrapper section aside .aside-education,
+.container .container--wrapper section aside .main-skills, .container .container--wrapper section main p,
+.container .container--wrapper section main .aside-education,
+.container .container--wrapper section main .main-skills {
+  overflow-y: scroll;
+  overflow-y: scroll;
+}
+
+.container .container--wrapper section aside p::-webkit-scrollbar,
+.container .container--wrapper section aside .aside-education::-webkit-scrollbar,
+.container .container--wrapper section aside .main-skills::-webkit-scrollbar, .container .container--wrapper section main p::-webkit-scrollbar,
+.container .container--wrapper section main .aside-education::-webkit-scrollbar,
+.container .container--wrapper section main .main-skills::-webkit-scrollbar {
+  height: 10px;
+  width: 20px;
+}
+
+.container .container--wrapper section aside p::-webkit-scrollbar-thumb,
+.container .container--wrapper section aside .aside-education::-webkit-scrollbar-thumb,
+.container .container--wrapper section aside .main-skills::-webkit-scrollbar-thumb, .container .container--wrapper section main p::-webkit-scrollbar-thumb,
+.container .container--wrapper section main .aside-education::-webkit-scrollbar-thumb,
+.container .container--wrapper section main .main-skills::-webkit-scrollbar-thumb {
+  background: #ffffff66;
+}
+
+.container .container--wrapper section aside p::-webkit-scrollbar,
+.container .container--wrapper section aside .aside-education::-webkit-scrollbar,
+.container .container--wrapper section aside .main-skills::-webkit-scrollbar, .container .container--wrapper section main p::-webkit-scrollbar,
+.container .container--wrapper section main .aside-education::-webkit-scrollbar,
+.container .container--wrapper section main .main-skills::-webkit-scrollbar {
+  height: 10px;
+  width: 20px;
+}
+
+.container .container--wrapper section aside p::-webkit-scrollbar-thumb,
+.container .container--wrapper section aside .aside-education::-webkit-scrollbar-thumb,
+.container .container--wrapper section aside .main-skills::-webkit-scrollbar-thumb, .container .container--wrapper section main p::-webkit-scrollbar-thumb,
+.container .container--wrapper section main .aside-education::-webkit-scrollbar-thumb,
+.container .container--wrapper section main .main-skills::-webkit-scrollbar-thumb {
+  background: #ffffff66;
+}
+
+@media (min-width: 0px) and (max-width: 1400px) {
+  .container .container--wrapper section aside p,
+  .container .container--wrapper section aside .aside-education,
+  .container .container--wrapper section aside .main-skills, .container .container--wrapper section main p,
+  .container .container--wrapper section main .aside-education,
+  .container .container--wrapper section main .main-skills {
+    font-size: 100%;
+  }
+}
+
+.container .container--wrapper section aside span, .container .container--wrapper section main span {
+  color: #ff7b00;
+  font-size: 200%;
+}
+
+.container .container--wrapper section aside #home--p, .container .container--wrapper section main #home--p {
+  height: 60%;
+}
+
+.container .container--wrapper section aside .section--button, .container .container--wrapper section main .section--button {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 0 10px;
+  margin: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  /* buttons */
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  font-size: 100%;
+  cursor: pointer;
+}
+
+@media (min-width: 0px) and (max-width: 1400px) {
+  .container .container--wrapper section aside .section--button, .container .container--wrapper section main .section--button {
+    font-size: 70%;
+    margin: 5px;
+    padding: 0 5px;
+  }
+}
+
+.container .container--wrapper section aside .section--button:hover, .container .container--wrapper section main .section--button:hover {
+  color: #ff7b00;
+}
+
+.container .container--wrapper section aside .aside-education, .container .container--wrapper section aside .main-skills, .container .container--wrapper section main .aside-education, .container .container--wrapper section main .main-skills {
+  width: 100%;
+  padding: 10px 0;
+}
+
+.container .container--wrapper section aside .aside-education td, .container .container--wrapper section aside .main-skills td, .container .container--wrapper section main .aside-education td, .container .container--wrapper section main .main-skills td {
+  padding-left: 20px;
+  width: auto;
+}
+
+.container .container--wrapper section aside .main-skills table th, .container .container--wrapper section main .main-skills table th {
+  width: 100%;
+}
+
+.container .container--wrapper section aside .main-contact, .container .container--wrapper section main .main-contact {
+  margin: auto;
+  width: 50%;
+  padding: 0 30px;
+  overflow-y: scroll;
+}
+
+@media (min-width: 0px) and (max-width: 1400px) {
+  .container .container--wrapper section aside .main-contact, .container .container--wrapper section main .main-contact {
+    width: 90%;
+  }
+}
+
+.container .container--wrapper section aside .main-contact::-webkit-scrollbar, .container .container--wrapper section main .main-contact::-webkit-scrollbar {
+  height: 10px;
+  width: 20px;
+}
+
+.container .container--wrapper section aside .main-contact::-webkit-scrollbar-thumb, .container .container--wrapper section main .main-contact::-webkit-scrollbar-thumb {
+  background: #ffffff66;
+}
+
+.container .container--wrapper section aside .main-contact form, .container .container--wrapper section main .main-contact form {
+  padding: 10px;
+}
+
+.container .container--wrapper section aside .main-contact form input, .container .container--wrapper section aside .main-contact form textarea, .container .container--wrapper section aside .main-contact form button, .container .container--wrapper section main .main-contact form input, .container .container--wrapper section main .main-contact form textarea, .container .container--wrapper section main .main-contact form button {
+  width: 100%;
+  background: #00000066;
+  border: 0;
+}
+
+.container .container--wrapper section aside .main-contact form input, .container .container--wrapper section aside .main-contact form textarea, .container .container--wrapper section main .main-contact form input, .container .container--wrapper section main .main-contact form textarea {
+  color: #ff7b00;
+}
+
+.container .container--wrapper section aside .main-contact form input::-webkit-input-placeholder, .container .container--wrapper section aside .main-contact form textarea::-webkit-input-placeholder, .container .container--wrapper section main .main-contact form input::-webkit-input-placeholder, .container .container--wrapper section main .main-contact form textarea::-webkit-input-placeholder {
+  padding-left: 10px;
+}
+
+.container .container--wrapper section aside .main-contact form input:-ms-input-placeholder, .container .container--wrapper section aside .main-contact form textarea:-ms-input-placeholder, .container .container--wrapper section main .main-contact form input:-ms-input-placeholder, .container .container--wrapper section main .main-contact form textarea:-ms-input-placeholder {
+  padding-left: 10px;
+}
+
+.container .container--wrapper section aside .main-contact form input::-ms-input-placeholder, .container .container--wrapper section aside .main-contact form textarea::-ms-input-placeholder, .container .container--wrapper section main .main-contact form input::-ms-input-placeholder, .container .container--wrapper section main .main-contact form textarea::-ms-input-placeholder {
+  padding-left: 10px;
+}
+
+.container .container--wrapper section aside .main-contact form input::placeholder, .container .container--wrapper section aside .main-contact form textarea::placeholder, .container .container--wrapper section main .main-contact form input::placeholder, .container .container--wrapper section main .main-contact form textarea::placeholder {
+  padding-left: 10px;
+}
+
+.container .container--wrapper section aside .main-contact form input:focus, .container .container--wrapper section aside .main-contact form input:hover, .container .container--wrapper section aside .main-contact form textarea:focus, .container .container--wrapper section aside .main-contact form textarea:hover, .container .container--wrapper section main .main-contact form input:focus, .container .container--wrapper section main .main-contact form input:hover, .container .container--wrapper section main .main-contact form textarea:focus, .container .container--wrapper section main .main-contact form textarea:hover {
+  border: none;
+  outline: 1px solid #ff7b00;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.container .container--wrapper section aside .main-contact form input, .container .container--wrapper section aside .main-contact form button, .container .container--wrapper section main .main-contact form input, .container .container--wrapper section main .main-contact form button {
+  height: 25px;
+}
+
+.container .container--wrapper section aside .main-contact form textarea, .container .container--wrapper section main .main-contact form textarea {
+  resize: none;
+}
+
+.container .container--wrapper section aside .main-contact form input:-webkit-autofill, .container .container--wrapper section main .main-contact form input:-webkit-autofill {
+  -webkit-text-fill-color: #ff7b00;
+}
+
+.container .container--wrapper section aside .main-contact form input:-webkit-autofill,
+.container .container--wrapper section aside .main-contact form input:-webkit-autofill:hover,
+.container .container--wrapper section aside .main-contact form input:-webkit-autofill:focus,
+.container .container--wrapper section aside .main-contact form input:-webkit-autofill:active, .container .container--wrapper section main .main-contact form input:-webkit-autofill,
+.container .container--wrapper section main .main-contact form input:-webkit-autofill:hover,
+.container .container--wrapper section main .main-contact form input:-webkit-autofill:focus,
+.container .container--wrapper section main .main-contact form input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0px 1000px rgba(0, 0, 0, 0) inset;
+          box-shadow: 0 0 0px 1000px rgba(0, 0, 0, 0) inset;
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.container .container--wrapper section aside .main-contact form button, .container .container--wrapper section main .main-contact form button {
+  color: #c7c7c7;
+  cursor: pointer;
+  background-color: #ff7b00;
+  outline: 0;
+  margin-top: 20px;
+}
+
+.container .container--wrapper section aside .main-contact form button:hover, .container .container--wrapper section main .main-contact form button:hover {
+  background-color: #c7c7c7;
+  color: #ff7b00;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.container .container--wrapper section aside .main-contact form p, .container .container--wrapper section main .main-contact form p {
+  font-size: 50%;
+}
+
+.container .container--wrapper section aside .main-contact form p a:hover, .container .container--wrapper section main .main-contact form p a:hover {
+  color: #ff7b00;
+}
+
+.container .container--wrapper section aside:hover, .container .container--wrapper section main:hover {
+  -webkit-transform: perspective(900px) rotateY(0deg);
+          transform: perspective(900px) rotateY(0deg);
+}
+
+.container .container--wrapper section aside .human_res, .container .container--wrapper section main .human_res {
+  overflow-y: scroll;
+}
+
+.container .container--wrapper section aside .human_res::-webkit-scrollbar, .container .container--wrapper section main .human_res::-webkit-scrollbar {
+  height: 10px;
+  width: 20px;
+}
+
+.container .container--wrapper section aside .human_res::-webkit-scrollbar-thumb, .container .container--wrapper section main .human_res::-webkit-scrollbar-thumb {
+  background: #ffffff66;
+}
+
+.container .container--wrapper section aside .human_res h1, .container .container--wrapper section aside .human_res th, .container .container--wrapper section main .human_res h1, .container .container--wrapper section main .human_res th {
+  text-align: center;
+}
+
+.container .container--wrapper section aside .human_res a, .container .container--wrapper section main .human_res a {
+  color: #c7c7c7;
+}
+
+.container .container--wrapper section aside .human_res a:hover, .container .container--wrapper section main .human_res a:hover {
+  color: #ff7b00;
+}
+
+.container .container--wrapper section aside .human_res div, .container .container--wrapper section main .human_res div {
+  padding: 10px;
+}
+
+.container .container--wrapper section aside .human_res table, .container .container--wrapper section main .human_res table {
+  width: 100%;
+}
+
+.container .container--wrapper section aside .human_res table th, .container .container--wrapper section main .human_res table th {
+  width: 10%;
+  border: none;
+  background-color: #f7991e;
+  color: black;
+  outline: none;
+}
+
+.container .container--wrapper section aside .human_res table tr:nth-child(odd), .container .container--wrapper section main .human_res table tr:nth-child(odd) {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.container .container--wrapper section aside .human_res table td, .container .container--wrapper section main .human_res table td {
+  padding: 10px;
+  text-align: center;
+}
+
+.container .container--wrapper section aside .human_res #show-table, .container .container--wrapper section main .human_res #show-table {
+  display: none;
+}
+
+.container .container--wrapper section aside #errors small, .container .container--wrapper section main #errors small {
+  color: red;
+  font-size: 60%;
+}
+
+.container .container--wrapper section .signup-page-main a {
+  font-size: 60%;
+}
+
+.container .container--wrapper section .signup-page-main a:hover {
+  color: #ff7b00;
+}
+
+.container .container--wrapper section #queries {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .container--wrapper section #queries a:hover {
+  color: #ff7b00;
+}
+
+.container .container--wrapper footer {
+  /* footer */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  height: 20%;
+  overflow: hidden;
+}
+
+@media (min-width: 0px) and (max-width: 1400px) {
+  .container .container--wrapper footer {
+    height: 30%;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 600px) {
+  .container .container--wrapper footer {
+    height: 10%;
+    display: none;
+  }
+}
+
+.container .container--wrapper footer aside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: auto;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.container .container--wrapper footer aside .footer--aside {
+  width: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: #00000066;
+  -webkit-animation-name: portfolio-slide;
+          animation-name: portfolio-slide;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@media (min-width: 0px) and (max-width: 600px) {
+  .container .container--wrapper footer aside .footer--aside {
+    height: 50%;
+  }
+}
+
+@-webkit-keyframes portfolio-slide {
+  from {
+    -webkit-transform: translateY(1300px);
+            transform: translateY(1300px);
+  }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes portfolio-slide {
+  from {
+    -webkit-transform: translateY(1300px);
+            transform: translateY(1300px);
+  }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+.container .container--wrapper footer aside .footer--aside h1 {
+  color: #ff7b00;
+  font-size: 200%;
+  text-transform: uppercase;
+  width: auto;
+  height: 100%;
+  padding: 8px 12px 5px 10px;
+}
+
+@media (min-width: 0px) and (max-width: 1400px) {
+  .container .container--wrapper footer aside .footer--aside h1 {
+    font-size: 100%;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 600px) {
+  .container .container--wrapper footer aside .footer--aside h1 {
+    font-size: 60%;
+    display: none;
+  }
+}
+
+.container .container--wrapper footer aside .footer--aside .left-nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.container .container--wrapper footer aside .footer--aside .left-nav ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-transform: uppercase;
+  font-size: 60%;
+}
+
+@media (min-width: 0px) and (max-width: 1400px) {
+  .container .container--wrapper footer aside .footer--aside .left-nav ul li {
+    font-size: 40%;
+  }
+}
+
+.container .container--wrapper footer aside .footer--aside .left-nav ul li:last-child {
+  color: #ff7b00;
+}
+
+.container .container--wrapper footer aside .footer--aside .left-nav ul li:last-child:hover {
+  color: #c7c7c7;
+}
+
+.container .container--wrapper footer .right-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  line-height: 100%;
+  height: auto;
+  width: auto;
+  -webkit-animation-name: nav-slide;
+          animation-name: nav-slide;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes nav-slide {
+  from {
+    -webkit-transform: translatey(1600px);
+            transform: translatey(1600px);
+  }
+  to {
+    -webkit-transform: translatey(0px);
+            transform: translatey(0px);
+  }
+}
+
+@keyframes nav-slide {
+  from {
+    -webkit-transform: translatey(1600px);
+            transform: translatey(1600px);
+  }
+  to {
+    -webkit-transform: translatey(0px);
+            transform: translatey(0px);
+  }
+}
+
+.container .container--wrapper footer .right-nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: auto;
+  height: 100%;
+  float: right;
+}
+
+@media (min-width: 0px) and (max-width: 600px) {
+  .container .container--wrapper footer .right-nav ul {
+    width: auto;
+    height: 35%;
+  }
+}
+
+.container .container--wrapper footer .right-nav ul li {
+  padding: 0 10px;
+}
+
+@media (min-width: 0px) and (max-width: 600px) {
+  .container .container--wrapper footer .right-nav ul li {
+    padding: 0 5px;
+  }
+  .container .container--wrapper footer .right-nav ul li:last-child {
+    padding-right: 10px;
+  }
+}
+
+.container .container--wrapper footer .right-nav ul li .active, .container .container--wrapper footer .right-nav ul li .btn:hover {
+  color: #ff7b00;
+}
+
+.container .container--wrapper footer .right-nav ul li a {
+  font-size: 100%;
+  line-height: 0px;
+}
+
+@media (min-width: 0px) and (max-width: 600px) {
+  .container .container--wrapper footer .right-nav ul li a {
+    font-size: 50%;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 1400px) {
+  .container .container--wrapper footer .right-nav ul li a {
+    font-size: 40%;
+  }
+}
+
+.container .container--wrapper footer .right-nav ul li:last-child {
+  color: #c7c7c7;
+}
+
+.container p.copy-rights {
+  display: block;
+  position: absolute;
+  top: 93%;
+  width: auto;
+  height: auto;
+  color: #cccccc;
+  font-style: italic;
+  font-size: 40%;
+  letter-spacing: 1px;
+}
+
+@media (min-width: 0px) and (max-width: 600px) {
+  .container p.copy-rights {
+    top: 97%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

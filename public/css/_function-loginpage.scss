@@ -1,0 +1,63 @@
+@mixin login-page {
+    #login-page, #signup-page{
+        @include center-flex;
+        height: 100%;
+        @include small-device{
+            margin-top: 0px;
+        }
+        main{
+            height: 50%; 
+            @include small-device{
+                width: 100%;
+            }
+            h1{
+                text-transform: uppercase;
+                align-self: center;                
+            }
+            small{
+                color: red;
+                font-size: 60%;
+            }     
+            .no-access{
+                display: none;
+                @include small-device{
+                    display: block;
+                }
+            } 
+        }
+        .login-locked{
+            justify-content: center;
+            h1, i{
+                text-align: center;
+                color: rgb(241, 0, 0);
+            }
+            i{
+                font-size: 800%;
+            }
+            @include small-device{
+                display: none;
+            }
+        }
+        .main-contact{
+            a, small{
+                font-size: 50%;
+                float: left;
+            }
+            a{
+                &:hover{
+                    color: $orange-color;
+                }
+            }
+        }
+    }
+    #login-page{
+        h1{
+            color: red;
+        }
+    }
+    #signup-page{
+        h1{
+            color: $orange-color;
+        }
+    }
+}

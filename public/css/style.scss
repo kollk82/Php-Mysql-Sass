@@ -1,0 +1,380 @@
+@import "reset";
+@import "variables";
+@import "functions";
+@import "function-home";
+@import "function-portfolio";
+@import "function-contact";
+@import "function-media";
+@import "function-loginpage";
+@import "function-dbTable";
+@import "function-nav";
+
+.container{
+    @include center-flex;
+    flex-direction: column;
+    position: relative;
+    width: 100vw;
+    height: 100vh;  
+   .container--wrapper{                                             /* header */
+        width: inherit;
+        height: inherit;
+        background-image: url("../static/img/bg-img2.jpg");
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-size: cover;
+        overflow: hidden;
+        header{
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            @include smaller-device{
+                flex-direction: column;           
+            }
+            width: 100%;
+            height: 20%; 
+            @include small-device{
+                height: 10%;       
+            }     
+            .hide-it{
+                @include nav-device{
+                    display: none;
+                }
+            }
+            .nav-bar{
+                display: none;
+                @include smaller-device{ 
+                    display: block;
+                    z-index: 9999;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    font-size: 200%;
+                    color: #7a7a7a;
+                    cursor: pointer;
+                    padding: 10px;
+                }
+            }
+            .top-nav-cl{
+                color: #7a7a7a;
+            }
+            #top-nav{
+                display: none;
+                @include smaller-device{  
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 100%;
+                    height: auto;
+                    z-index: 2;
+                    background-color: #f1f1f1;
+                    padding: 10px 0;
+                    ul{
+                        text-align: center;
+                        li{
+                            .active, .btn:hover{
+                                color:$orange-color;
+                            }                            
+                            .active-nav{
+                                color:$orange-color;
+                            }
+                        }
+                    }
+                }
+            }              
+            .box-1, .box-2{
+                @include smaller-device{
+                    @include center-flex;          
+                }
+                width: 100%;
+                height: auto;    
+                padding: 10px;
+                @include smaller-device{
+                    padding: 5px 0px;
+                    animation: none;          
+                }
+                object-fit: cover;                
+                animation-name: roll;
+                animation-duration: 2s;  
+                animation-fill-mode: forwards;
+                @keyframes roll {
+                    from {transform: translateY(-1600px);}
+                    to {transform: translateY(0px);}
+                }
+                .box-top-content{
+                    width: 400px;
+                    height: 100px;
+                    @include small-device{
+                        width: 200px;
+                        height: 50px;
+                    }
+                    background-color: $content-bg;
+                    border-radius: 50px;
+                    ul{             
+                        font-size: 60%;
+                        line-height: 150%;
+                        font-weight: 400;
+                        height: 100%;
+                        padding-top: 10px;
+                        padding-left: 150px;
+                        @include small-device{
+                            font-size: 30%;
+                            padding-left: 60px;
+                        }
+                        li{
+                            &:first-child{
+                                color: $orange-color;
+                                font-size: 150%;
+                                font-weight: bold;
+                            }
+                        }
+                    }     
+                }
+                .social{
+                    float: right; 
+                    margin-left: auto;
+                    @include smaller-device{
+                        float: none; 
+                        margin-left: 0;
+                    }
+                }
+                .social ul{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-size: 160%;
+                    padding: 0;
+                    margin: 0 50px;
+                    @include small-device{
+                        font-size: 100%;
+                        margin: 0 20px;
+                    }
+                    li{
+                        &:first-child{
+                            color: #00acee;
+                            font-size: 100%;
+                        }
+                        &:nth-child(2){
+                            color:#6992eb ;
+                        }
+                        &:nth-child(3){
+                            color:#f5d72e ;
+                        }
+                        &:nth-child(4){
+                            color:#63be57 ;
+                        }
+                    }
+                }
+                img{
+                    width: 100px;
+                    height: 100px;
+                    @include small-device{
+                        width: 50px;
+                        height: 50px;
+                    }
+                    border: 2px solid $orange-color;
+                    border-radius: 100px;
+                    opacity: .9;
+                    object-fit: contain;
+                    float: left;
+                }
+            }
+        }
+        @include login-page;          
+        section{                                               /* main */
+            display: flex;
+            flex-direction: row;
+            @include small-device{
+                flex-direction: column;
+                margin-left: 20px;
+                @include scrollbar;
+            }
+            height: 60%;
+            @include smaller-device{
+                margin-top: 50px;
+                height: 75%;
+                margin-left: 20px;
+            }
+            
+            aside, main{
+                .news{
+                    @include scrollbar;
+                    padding-top: 10px;
+                    a{
+                        h1{
+                            padding-bottom: 30px;
+                            color: $orange-color;
+                            &:hover{
+                                color: $primary-font-color
+                            }
+                        }
+                    }
+                    p{
+                        text-indent: 30px;
+                    }
+                }
+                margin:30px 30px;
+                @include small-device{
+                    margin: 10px 30px;
+                }
+                display: flex;
+                flex: 1;
+                height: auto;
+                flex-direction: column;
+                padding: 2%;
+                @include small-device{
+                    padding-top: 10px;
+                }
+                
+                background-color: $content-bg;
+                transition: .2s;
+                transform: perspective(900px) rotateY(0deg);
+                text-align: left;
+                &:hover{
+                    transition: .2s;
+                    transform: perspective(900px) rotateY(5deg);
+                    @include small-device{
+                        transform: perspective(900px) rotateY(0deg);
+                    }
+                }
+                h1{
+                    color: $orange-color;
+                    font-size: 150%;
+                    @include small-device{
+                        font-size: 100%;
+                    }
+                    padding-bottom: 10px;
+                    @include small-device{
+                        padding-bottom: 5px;
+                    }
+                }
+                p,
+                .aside-education,
+                .main-skills {
+                    @include scrollbar;
+                    @include scrollbar;
+                    @include small-device{
+                        font-size: 100%;
+                    }
+                }
+                span{
+                    color: $orange-color;
+                    font-size: 200%;
+                }
+                @include section-home;
+                @include section-portfolio;
+                @include section-contact;
+                @include section-table;
+                #errors{
+                    small{
+                        color: red;
+                        font-size: 60%;
+                    } 
+                }
+            }
+            .signup-page-main{
+                a{
+                    font-size: 60%;
+                    &:hover{
+                        color: $orange-color;
+                    }
+                }
+            }
+            #queries{
+                @include center-flex;
+                a{
+                    &:hover{
+                        color: $orange-color;
+                    }
+                }
+            }
+        }
+        footer{                                                    /* footer */
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            height: 20%;
+            @include small-device{
+                height: 30%;       
+            }  
+            @include smaller-device{
+                height: 10%; 
+                display: none;      
+            }  
+            overflow: hidden;
+            aside{
+                display: flex;
+                flex: 1;
+                height: auto;
+                justify-content: flex-start;
+                align-items: flex-end;
+                .footer--aside{
+                    width: 100%;        
+                    position: relative;
+                    display: flex;
+                    flex-direction: row;     
+                    background-color: $content-bg;
+                    @include smaller-device{
+                        height: 50%;     
+                    }  
+                    animation-name: portfolio-slide;
+                    animation-duration: 2s;  
+                    animation-fill-mode: forwards;
+                    @keyframes portfolio-slide {
+                        from {transform: translateY(1300px);}
+                        to {transform: translateY(0px);}
+                    }
+                    h1{
+                        color: $orange-color;
+                        font-size: 200%;
+                        text-transform: uppercase;
+                        @include small-device{
+                            font-size: 100%;
+                        }
+                        @include smaller-device{
+                            font-size: 60%;
+                            display: none;
+                        }
+                        width: auto;
+                        height: 100%;
+                        padding: 8px 12px 5px 10px;
+                    }
+                    .left-nav{
+                        ul {
+                            display: flex;
+                            flex-direction: row;
+                            li{                                                 
+                                display: flex;                           
+                                text-transform: uppercase;
+                                font-size: 60%;
+                                @include small-device{
+                                    font-size: 40%;
+                                }
+                                &:last-child{
+                                    color: $orange-color;
+                                    &:hover{
+                                        color: $primary-font-color;
+                                    }
+                                }
+                            }
+                        }
+                    }                    
+                }
+            }
+            @include nav;
+        }
+    }
+    p.copy-rights{
+        display: block;
+        position: absolute;
+        top: 93%;
+        width: auto;
+        height: auto;
+        color: rgb(204, 204, 204);
+        font-style: italic;
+        font-size: 40%;
+        letter-spacing: 1px;
+        @include smaller-device{
+            top: 97%;
+        }
+    }
+}
