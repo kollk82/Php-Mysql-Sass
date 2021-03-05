@@ -1,6 +1,6 @@
 # Portfolio 2
 
---Not really a portfolio rather bunch of files.  
+--Not really a portfolio rather a bunch of files.  
 --Second half of my CCT Web Development Diploma course.  
 --A challenge for me quite challenging huh...  
 --No previous experiance in PHP, MySQL.  
