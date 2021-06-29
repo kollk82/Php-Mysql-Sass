@@ -1,4 +1,4 @@
-# Portfolio 2
+# Portfolio 
 
 --Not really a portfolio rather a bunch of files.  
 --Second half of my CCT Web Development Diploma course.  
